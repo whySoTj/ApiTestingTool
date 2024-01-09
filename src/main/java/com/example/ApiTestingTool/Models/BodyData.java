@@ -4,11 +4,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 public class BodyData {
 
+    private int id;
     private String url;
     private String method;
     private JsonNode headers;
     private JsonNode body;
     private JsonNode validation;
+    private JsonNode expectedRes;
     public String getUrl() {
         return url;
     }
@@ -39,7 +41,17 @@ public class BodyData {
     public void setValidation(JsonNode validation) {
         this.validation = validation;
     }
+    public JsonNode getExpectedRes() {
+        return expectedRes;
+    }
+    public void setExpectedRes(JsonNode expectedRes) {
+        this.expectedRes = expectedRes;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    
-    
 }
